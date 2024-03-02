@@ -1,0 +1,54 @@
+a)
+21292 Einträge/Tupels
+
+keine fehlerhaften Daten in den Attributen 'Datum' und 'Zeit' (mit Regex überprüft)
+
+falsche Darstellung von Nicht-ASCII Zeichen
+auffallend: 
+	- ä wurde zu „
+	- ö wurde zu ”
+	- Ü wurde zu "CANCEL CHARACTER"
+	- ß wurde zu á (selbst kein ASCII)
+	- NONE Werte
+	- Kategorien (Tee vs. Tea, Waffeln vs. Waffel, Postkarte, T-Shirt)
+	- Transaktionsnummern nicht fortlaufend (Bsp. 177 fehlt)
+	- Transaktion am 1.1.17 um 01:21 Uhr
+
+Datenkorrektur via externes Progrmam (Excel)
+
+
+
+b)
+(1) Verteilung der Items
+	kategorisch, Balkendiagramm z.B. ggplot2
+	absteigend sortiert
+
+(2) Transaktionen aggregiert über den Tagesverlauf
+	aggregieren mit Genauigkeit 1h oder 30min?
+	Balkendiagramm (Inspiration: Google Stoßzeiten)
+
+(3) Transaktionen über Zeit
+	
+(4) Anzahl Items pro Transaktion
+
+	
+c) Filtermöglichkeiten
+(1) Min/Max Häufigkeit + Kategorien (Multiple choice)
+(2) Tagesbereich eingrenzen?
+(3)
+(4)
+
+zu verbessern:
+  b1) -beide Filter (Häufigkeit, kategorie-Auswahl) zusammen
+      -Select-Input, n-Werte sollten nicht drin vorkommen
+      -Plot und Tabelle untereinander in ein Tab (?)
+      
+  b2) -UI nicht intuitiv
+        -> Eingabefeld für Zeit auf jeden Fall besser als diese 6 Slider
+      -Spanne von mehreren Tagen sinnvoll (?)
+
+	
+"Extras"
+  -Diagramme zeigen Item und n an bei Klick auf jeweiligen Balken
+  -mehr Farbe
+

@@ -1,0 +1,41 @@
+---
+title: "Aufgabe_2"
+output: 
+  html_document:
+    css: style.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{}
+a) Lesen Sie den Datensatz „wein.csv“ ein und visualisieren Sie die Verteilungen der Attribute. Verwenden Sie dabei verschiedene Darstellungsformen wie zum Beispiel Histogramme oder Boxplots und bewerten Sie die Vor- und Nachteile der Darstellungen.
+```
+
+## Boxplot
+
+Vorteile   | Nachteile
+-----------|---------------
+gut zu vergleichen, wenn nebeneinander gelegt:<br/> hier nicht sinnvoll, da unterschiedliche Skalen und Einheiten  | Anzahl von Ausreißern mit sehr ähnlichem oder gleichen Wert nicht mehr sichtbar (siehe Asche)
+gut geeignet zur statistischen Auswertung | Ausreißer nicht konsequent klassifiziert (vergleiche Magnesium und Flavanoide)
+***
+## Histogramm
+
+Vorteile   | Nachteile
+-----------|---------------
+Ausreißer immer noch gut zu erkennen  | da es sich um stetige Werte handelt, müssen Werte aggregiert werden<br/> -> Intervalle nicht mehr gut erkennbar
+Häufigkeiten gut ablesbar | fehlende Information über Median und Quantilen
+
+
+```{}
+b) Berechnen Sie die paarweisen linearen Regressionen der Attribute und stellen Sie diese visuell dar. Geben Sie zudem die Qualitätswerte der Regressionen aus.
+```
+
+## Qualitätswerte
+
++ **Residual** = Observed value - Predicted value
++ **p-value**  = Annahme der Null-Hypothese (alle Koeffizienten gleich 0, d.h. keine lineare Abhängigkeit)
+  + wird abgeleht, wenn p-Wert kleiner als Signifikanzniveau
++ **R-squared** gibt an, wie viel Varianz der abhängigen Variable durch die unabhängigen Variablen impliziert ist
+  + Wert zwischen 0 und 1
